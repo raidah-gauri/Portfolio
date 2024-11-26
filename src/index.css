@@ -1,0 +1,775 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+ /* Navbar Customization */
+
+
+/* Responsive behavior */
+@media (max-width: 575px) {
+    .navbar-nav {
+        text-align:center;
+    }
+ 
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+/* Hero.jsx */
+#home{
+  background:url("images/white-bg.jpg") no-repeat;
+  background-size:cover; /* Makes the image cover the entire element */
+}
+.content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*  Make it take the full viewport height */
+  padding-left: 4%; /* Replace left absolute positioning */
+  color: #4C4C4C;
+  font-weight: 500;
+}
+.content .text-content{
+  height: 50%;
+  width: 90%;
+  margin-top: 40rem;
+  /* background-color: red; */
+}
+.content .text-content .intro {
+  color: #2c3e50;
+ 
+  font-size: 34px;
+}
+
+.content .text-content .name {
+  color: #2c3e50;
+  font-size: 54px;
+  margin: -10px 0 0 -6px;
+}
+
+.content .text-content .loop {
+  overflow: hidden;
+  white-space: nowrap;
+  color:#2c3e50;
+  font-size: 44px;
+  border-right: 4px solid #999999;
+  margin: -10px -10px 14px -6px;
+  animation: typing 5s steps(13) infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  50% {
+    width: 14ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+
+.content .btn button {
+  margin: 0 6px;
+  padding: 8px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #b96076,#e03e5b);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+.content .btn button a{
+  text-decoration: none;
+  color: white;
+}
+.content .btn button:hover {
+  transform: scale(0.98);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  font-family: "Nunito Sans", sans-serif;
+}
+
+
+
+
+
+
+/* Footer sticks to the bottom */
+footer {
+  margin-top: auto; /* Pushes the footer to the bottom */
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: #293552; /* Dark blue */
+}
+
+.bi {
+  font-size: 20px;
+  color: #f05a7c; /* Pink for branding */
+}
+
+footer .text-muted {
+  color: #d3d3d3 !important; /* Muted text for links and text */
+}
+
+footer a.text-muted:hover {
+  color: #f05a7c; /* Pink on hover */
+}
+
+/* Skills Bar */
+.container-sb {
+  position: relative;
+  /* background-color: #189BCC; */
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100rem;
+}
+
+.container-sb .white-container {
+  background-color: white;
+  border:2px solid #2c3e50;
+  margin: 17px 0;
+  width: 33rem;
+  height: 17rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease-in-out; 
+  padding: 13px 23px;
+  border-radius: 17px;
+}
+.white-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+}
+.white-container .title{
+  font-size: 18px;
+  display: block;
+  /* margin-bottom: 6px; */
+}
+.title1{
+  font-size: 18px;
+  margin-top: 9px;
+}
+.skill-bar1{
+  border-radius: 6px;
+  height: 8px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.white-container .skill-bar{
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  background-color:rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.skill-per1{
+  position: relative;
+  border-radius: 6px;
+  width: 85%;
+  height: 8px;    
+  background-color: #293552;
+  animation: progress1 2s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes progress1 {
+  0%{
+      width: 0;
+  }
+  100%{
+     
+      opacity: 1;
+  }
+  
+}
+
+.tooltip1{
+  position:absolute;
+  /* top: 34px; */
+  right: -16px;
+  top: -27px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #293552;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  z-index: 1;
+
+}
+.tooltip1::before{
+  position: absolute;
+  z-index: -1;
+  content: '';
+  height: 12px;
+  width: 12px;
+  background-color:#293552;
+  /* bottom: -6px; */
+  top: 12px;
+  transform: rotate(45deg);
+  left: 33%;
+}
+
+.skill-bar .skill-per{
+  position: relative;
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #293552;
+  animation: progress 2s ease-in-out forwards;
+  opacity: 0;
+  /* margin-top: 1px; */
+  /* margin-bottom: 12px; */
+  
+}
+@keyframes progress{
+  0%{
+      width: 0;
+  }
+  100%{
+      /* width: 90%; */
+      opacity: 1;
+  }
+}
+.skill-per .tolltip{
+ display: block;
+ position: absolute;
+ right: -14px;
+ margin-top: 6px;
+ background-color:#293552;
+ top: -36px;
+ padding: 2px 5px;
+ border-radius: 3px;
+ color: white;
+ font-weight: 500;
+ font-size: 12px;
+ z-index: 1;
+}
+.tolltip::before{
+  z-index: -1;
+  position: absolute;
+  top: 12px   ;
+  height: 12px;
+  width: 12px;
+  transform:rotate(45deg);
+  left: 32%;
+  content: '';
+  background-color:#293552;
+}
+.title2{
+  font-size: 18px;
+  margin-top: 13px;
+}
+.skill-bar2{
+  border-radius: 6px;
+  height: 8px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+.skill-per2{
+  background-color: #293552;
+  height: 8px;
+  width: 60%;
+  border-radius: 6px;
+  animation: progress3 2s ease-in-out forwards;
+  opacity: 0;
+  position: relative;
+ 
+}
+@keyframes progress3 {
+  0%{
+      width: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+.tooltip2{
+  position: absolute;
+  top: -28px;
+  padding: 2px 5px;
+  font-weight: 500;
+ font-size: 12px;
+ border-radius: 3px;
+ right: -6%;
+ background-color: #293552;
+ color: white;
+z-index: 1;
+}
+.tooltip2::before{
+  position: absolute;
+  background-color:#293552;
+  height: 13px;
+  width: 13px;
+  z-index: -1;
+  content: '';
+  top: 12px;
+  transform: rotate(45deg);
+  left: 33%;
+}
+.skill-per2.Bootstrap{
+  width: 90%;
+  
+  /* left: 34%; */
+}
+.tooltip3{
+  position: absolute;
+  top: -28px;
+  padding: 2px 5px;
+  font-weight: 500;
+ font-size: 12px;
+ border-radius: 3px;
+ right: -4%;
+ background-color: #293552;
+ color: white;
+z-index: 1;
+}
+.tooltip3::before{
+  position: absolute;
+  background-color:#293552;
+  height: 13px;
+  width: 13px;
+  z-index: -1;
+  content: '';
+  top: 12px;
+  transform: rotate(45deg);
+  left: 25%;
+}
+
+/* Projects  */
+.project{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward motion */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Normal position */
+  }
+}
+
+.image {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  will-change: transform, opacity; /* Optimizes rendering performance */
+  width: 40rem;
+  height:25rem;
+  border-radius:20px;
+  transform:translateY(20px); 
+  opacity:0;
+}
+.image img{
+  width:100%;
+  height:100%;
+  border-radius:20px;
+  object-fit:cover;
+}
+
+
+.proj-para {
+  animation: none; /* Same for the text content */
+}
+/* Navbar */
+/* styles.css */
+
+/* Navbar styling */
+.custom-navbar {
+    background-color: #343a40; /* Dark background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+.logo {
+    color: #ffffff; /* White text for logo */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* White text for nav links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center; /* Center align items in mobile view */
+    }
+}
+/* Footer */
+/* styles.css */
+
+/* Navbar styling */
+.custom-navbar {
+  background-color: #343a40; /* Dark background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.logo {
+  color: #ffffff; /* White text for logo */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* White text for nav links */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover and active effects */
+  padding: 10px 15px; /* Add padding for better click area */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff; /* Keep text white on hover */
+  font-size: 16px;
+  border-radius: 17px;
+  padding: 12px;
+  text-decoration: 2px #f05a7c underline;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffffff; /* White text for active link */
+  margin-left: 20px;
+}
+
+.navbar-toggler {
+  border-color: #f05a7c; /* Pink border for toggler button */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(240, 90, 124, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom color for hamburger icon */
+}
+
+.custom-btn {
+  background-color: #f05a7c; /* Pink background for button */
+  color: #ffffff; /* White text for contrast */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.custom-btn:hover {
+  background-color: #e03e5b; /* Darker pink on hover */
+  color: #ffffff; /* Keep text white on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-nav {
+      text-align: center; /* Center align items in mobile view */
+  }
+}
+
+
+/* Responsiveness */
+/* Responsive styles for Nest Hub (1024x600) */
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .content .text-content .intro {
+    font-size: 28px; /* Reduced size */
+  }
+  #projects h1{
+    font-size: 32px;
+  }
+
+ .image {
+    width: 30rem; /* Adjusted width */
+    height: 18rem; /* Adjusted height */
+    margin: 0 auto; /* Center align on smaller screens */
+  }
+
+  .container-sb .white-container{
+    width: 29rem;
+  }
+  .container-sb h1{
+      font-size: 1.6rem; /* Smaller title size */
+  }
+  
+  .proj-para p{
+    font-size: 12px;
+  }
+
+  .content .text-content .name {
+    font-size: 40px; /* Reduced size */
+  }
+
+  .content .text-content .loop {
+    font-size: 32px; /* Reduced size */
+  }
+
+  .content .btn button {
+    padding: 6px; /* Slightly smaller button */
+    font-size: 14px; /* Adjust button text size */
+  }
+}
+
+
+/* Media for Iphone 12 Pro*/
+@media screen and (max-width: 390px) {
+.content{
+  height: 50rem;
+  /* width: 29rem; */
+}
+
+  .content .text-content .intro {
+    font-size: 2.2rem !important; /* Ensures it overrides */
+  }
+
+  .content .text-content .name {
+    margin-top:3px;
+    font-size: 2.4rem !important; /* Adjusted size */
+  }
+
+  .content .text-content .job {
+    font-size: 1.7rem !important; /* Adjusted size */
+  }
+
+  .content .btn button {
+    /* padding: 10px 20px; */
+    font-size: 1rem !important; /* Ensuring button font-size is applied */
+  }
+
+  /* //// */
+  #projects h1{
+    font-size: 22px;
+    text-align: center;
+  }
+  .row {
+    flex-direction: column;
+    align-items: center; /* Stack the columns */
+  }
+
+  .col {
+    width: 100%; /* Make each column take up full width */
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .proj-para h1 {
+    font-size: 1.2rem; /* Adjust heading size */
+  }
+
+  .proj-para p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+  }
+
+  /* Adjust image size for small screens */
+  .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Adjust the transition for images */
+  .image {
+    max-width: 100%;
+    height: 12rem;
+    overflow: hidden;
+  }
+
+  .container-sb {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-sb h1 {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Adjust the white container's width and layout */
+  .white-container {
+    width: 80%; /* Set a smaller width to prevent overflow */
+    max-width: 310px; /* Limit maximum width to prevent it from being too wide */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px; /* Optional: add rounded corners */
+  }
+
+  .title, .title1, .title2 {
+    font-size: 14px;
+  }
+
+  .skill-bar, .skill-bar1, .skill-bar2 {
+    height: 6px;
+    margin-bottom: 5px;
+  }
+
+  .skill-per, .skill-per1, .skill-per2 {
+    height: 6px;
+  }
+
+  .tooltip1, .tooltip2, .tooltip3, .tolltip {
+    font-size: 10px;
+    top: -20px;
+  }
+
+  .skill-per {
+    width: 90%;
+  }
+
+  .skill-per1 {
+    width: 85%;
+  }
+
+  .skill-per2 {
+    width: 60%;
+  }
+
+  .tooltip1, .tooltip2, .tooltip3 {
+    top: -24px;
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  /* Center align the h1 text */
+  .container-sb h1 {
+    font-size: 16px;  /* Adjust the font size */
+    text-align: center;  /* Ensure text is centered */
+    margin-bottom: 15px;  /* Add margin below the title */
+  }
+
+  /* Resize images inside the columns */
+  .image img {
+    width: 80%;  /* Adjust image width */
+    height: 90%;  /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between images and text */
+  }
+
+  /* Adjust margins or padding for the project description area */
+  .proj-para {
+    margin-top: 5rem;  /* Reduce the margin-top for a closer layout */
+  }
+
+  .proj-para h1 {
+    font-size: 18px; /* Adjust font size of project title */
+  }
+
+  .project {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .row {
+    margin-bottom: 20px; /* Add some spacing between rows */
+  }
+}
+@media screen and (max-width: 912px) and (min-width: 800px) {
+  /* Adjust image size for Surface Pro 7 */
+  .image img {
+    width: 85%; /* Reduce the image size a bit more */
+    height: 20rem; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add margin below the image */
+    border-radius: 10px; /* Optional: add rounded corners */
+  }
+
+  /* Adjust project titles for better fit */
+  .proj-para h1 {
+    font-size: 1.3rem; /* Adjust font size */
+    margin-bottom: 10px; /* Space between title and content */
+  }
+  .h-sp{
+    margin-top:5rem;
+  }
+
+  /* Optionally, adjust project description text */
+  .proj-para p {
+    font-size: 0.95rem; /* Slightly smaller text for better readability */
+  }
+
+  /* Adjust the title of the section */
+  .container h1 {
+    font-size: 1.8rem; /* Adjust the section title size */
+  }
+
+  /* Adjust margins between sections */
+  .row {
+    margin-bottom: 30px; /* Add some space between rows */
+  }
+}
+
+
